@@ -26,8 +26,8 @@ key = "F11"
 [scrolling]
 history = 50000
 
-[terminal.shell]
-program = "/bin/zsh"
+#[terminal.shell]
+#program = "/bin/zsh"
 
 [window]
 opacity = 0.95

@@ -118,7 +118,7 @@ eval $(keychain --eval --quiet id_ed25519)
 # Sätter vim som en alias till nvim
 alias vim=nvim
 
-. /opt/asdf-vm/asdf.sh
+export ASDF_DATA_DIR="/home/myuser/.asdf"
 
 # Sätter neofetch som en alias till fastfetch
 alias neofetch=fastfetch
