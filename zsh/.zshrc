@@ -110,7 +110,6 @@ source $ZSH/oh-my-zsh.sh
 # Autosuggestion
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # Lägger till ssh-nycke
 eval $(keychain --eval --quiet id_ed25519)
 
@@ -118,9 +117,13 @@ eval $(keychain --eval --quiet id_ed25519)
 # Sätter vim som en alias till nvim
 alias vim=nvim
 
-. /opt/asdf-vm/asdf.sh
+#ASDF
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # Sätter neofetch som en alias till fastfetch
 alias neofetch=fastfetch
+
+alias ll=ls -l
+
 
 neofetch
