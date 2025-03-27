@@ -48,6 +48,11 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+
+# Dölj titelpanel på fönster
+default_border pixel 1
+default_floating_border pixel 1
+
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
 set $up k
@@ -55,8 +60,10 @@ set $down j
 set $left h
 set $right l
 
+# Sätter windowsknappen som modkey
 set $mod Mod4
 
+# Starta webläsare
 bindsym $mod+b exec $webbrowser
 
 # use Mouse+$mod to drag floating windows to their wanted position
@@ -224,4 +231,4 @@ bar {
 #
 # Please remove the following exec line:
 #######################################################################
-exec i3-config-wizard
+#exec i3-config-wizard
