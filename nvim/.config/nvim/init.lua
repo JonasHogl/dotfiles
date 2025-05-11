@@ -7,6 +7,16 @@ vim.g.maplocalleader = " "
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+vim.cmd([[
+  augroup TransparentBackground
+    autocmd!
+    autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+    autocmd ColorScheme * highlight NormalFloat ctermbg=NONE guibg=NONE
+    autocmd ColorScheme * highlight NonText ctermbg=NONE guibg=NONE
+    " Add other groups as needed inside the autocmd ColorScheme *
+  augroup END
+]])
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!

@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export PATH=~/jonkis/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
@@ -114,6 +116,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Lägger till ssh-nycke
 eval $(keychain --eval --quiet id_ed25519)
 
+export EDITOR=nvim
 
 # Sätter vim som en alias till nvim
 alias vim=nvim
