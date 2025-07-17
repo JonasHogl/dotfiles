@@ -27,7 +27,8 @@ get_aur_helper() {
   fi
 }
 
-get_aur_helper
+#get_aur_helper
+aur_helper="paru"
 export -f pkg_installed
 
 # Trigger upgrade
