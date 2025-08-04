@@ -52,6 +52,7 @@
     "mpris",                // media info
 
     "custom/left6",
+    "tray",
     "pulseaudio",           // output device
 
     "custom/left7",
@@ -334,6 +335,9 @@
     "tooltip-format-paused": "Paused: {title} - {artist}",
     "min-length": 5,
     "max-length": 35
+  },
+  "tray": {
+    "spacing": 10
   },
 
   "pulseaudio": {
