@@ -1,0 +1,85 @@
+##############################
+### WINDOWS AND WORKSPACES ###
+##############################
+
+# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+# See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
+
+# Example windowrule v1
+# windowrule = float, ^(kitty)$
+
+# Example windowrule v2
+# windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
+
+windowrule {
+    # Ignore maximize requests from all apps. You'll probably like this.
+    name = suppress-maximize-events
+    match:class = .*
+
+    suppress_event = maximize
+}
+
+windowrule {
+    # Fix some dragging issues with XWayland
+    name = fix-xwayland-drags
+    match:class = ^$
+    match:title = ^$
+    match:xwayland = true
+    match:float = true
+    match:fullscreen = false
+    match:pin = false
+
+    no_focus = true
+}
+
+windowrule {
+    name = "discord starts on dedicated workspace"
+    match:class = discord
+
+    workspace = 3 silent
+}
+
+windowrule {
+    name = "steam starts on dedicated workspace"
+    match:class = steam
+
+    workspace = 4 silent
+}
+
+windowrule {
+    name = "start spotify on dedicated workspace"
+    match:class = (?i)spotify
+
+    workspace = 5 silent
+}
+
+# Hyprland-run windowrule
+windowrule {
+    name = move-hyprland-run
+
+    match:class = hyprland-run
+
+    move = 20 monitor_h-120
+    float = yes
+}
+
+
+# Fix some dragging issues with XWayland
+#windowrulev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
+
+# Lägg till blur
+#
+#layerrule = blur, waybar
+#layerrule = ignorezero, waybar
+#layerrule = ignorealpha 0.5, waybar
+#
+#layerrule = blur, wofi
+#layerrule = ignorezero, wofi
+#layerrule = ignorealpha 0.5, wofi
+#
+#layerrule = blur, swaync-control-center
+#layerrule = blur, swaync-notification-window
+#layerrule = ignorezero, swaync-control-center
+#layerrule = ignorezero, swaync-notification-window
+#layerrule = ignorealpha 0.5, swaync-control-center
+#layerrule = ignorealpha 0.5, swaync-notification-window

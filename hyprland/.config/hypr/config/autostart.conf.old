@@ -1,0 +1,25 @@
+#################
+### AUTOSTART ###
+#################
+
+# See https://wiki.hypr.land/Configuring/Keywords/#executing
+
+source = ~/.config/hypr/config/defaults.conf
+
+# ----------------------------------- Bakgrundsapplikationer -------------------------------------------------
+exec-once = nm-applet # Network Manager Applet   - För att kunna meka med internetinställningar vid behov
+exec-once = waybar    # Waybar                   - Statusbar i toppen av skärmytan
+exec-once = hyprpaper # Hyprpaper                - Bakgrundsbildhanterare skapat för hypr-ekosystemet
+exec-once = hypridle  # Hypridle                 - Idle-hanterare skapat för hypr-ekosystemet
+exec-once = swaync    # Sway Notification Center - Notifikationshanterare
+# ------------------------------------------------------------------------------------------------------------
+
+exec-once = [workspace 1 silent] $webbrowser
+exec-once = [workspace 2 silent] $terminal
+
+exec-once = flatpak run com.discordapp.Discord
+exec-once = steam
+exec-once = spotify
+
+exec-once = wl-paste --type text --watch cliphist store
+exec-once = wl-paste --type image --watch cliphist store

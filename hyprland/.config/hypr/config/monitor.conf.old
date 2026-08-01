@@ -1,0 +1,18 @@
+################
+### MONITORS ###
+################
+
+# See https://wiki.hyprland.org/Configuring/Monitors/
+#monitor=,preferred,auto,auto
+
+# Skärmkonfig för stationnära
+#monitor = HDMI-A-1, 2560x1440, 0x0, 1
+#monitor = HDMI-A-2, 2560x1440@144, 2560x0, 1
+
+# Utrawide
+monitor = DP-2, 5120x1440@240, 0x0, 1
+#monitor = HDMI-A-1, 5120x1440@240, 0x0, 1
+
+# Skärmkonfig för laptop
+monitor = eDP-1, 1920x1080@60, 0x0, 1
+
